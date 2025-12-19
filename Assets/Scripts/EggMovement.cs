@@ -21,6 +21,10 @@ public class EggMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!GameManager.Instance.gameStarted)
+        {
+            return;
+        }
         accel = Input.acceleration;
         velocity = rb.linearVelocity;
 

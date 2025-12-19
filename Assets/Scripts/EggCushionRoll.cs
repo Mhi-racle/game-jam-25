@@ -29,6 +29,10 @@ public class EggCushionRoll : MonoBehaviour
 
     private void FixedUpdate()
     {
+         if (!GameManager.Instance.gameStarted)
+        {
+            return;
+        }
         if (cushionData == null)
             return;
 
